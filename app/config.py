@@ -14,7 +14,7 @@ DATABASE_URL = os.getenv("DATABASE_URL", "sqlite:///./db.sqlite3")
 JWT_SECRET = os.getenv("JWT_SECRET", "super-secret-key")
 
 # Redis connection
-REDIS_URL = os.getenv("REDIS_URL", "redis://localhost:6379/0")
+# REDIS_URL = os.getenv("REDIS_URL", "redis://localhost:6379/0")
 
 # Stripe keys (will be added later)
 import os
