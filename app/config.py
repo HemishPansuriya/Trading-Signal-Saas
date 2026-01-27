@@ -5,6 +5,7 @@ In production these come from environment variables.
 """
 
 import os
+import requests
 
 # Database (SQLite for local)
 DATABASE_URL = os.getenv("DATABASE_URL", "sqlite:///./db.sqlite3")
@@ -17,6 +18,8 @@ REDIS_URL = os.getenv("REDIS_URL", "redis://localhost:6379/0")
 
 # Stripe keys (will be added later)
 import os
+UPSTASH_URL = os.getenv("UPSTASH_REDIS_REST_URL","https://living-quetzal-42747.upstash.io")
+UPSTASH_TOKEN = os.getenv("UPSTASH_REDIS_REST_TOKEN","Aab7AAIncDJhMTQ5NmFiMjhiMDY0NjY4ODZiZTQyZmZjNzkyMWViYXAyNDI3NDc")
 
 JWT_SECRET = os.getenv("JWT_SECRET", "super-secret")
 
