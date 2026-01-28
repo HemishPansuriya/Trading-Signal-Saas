@@ -1,4 +1,4 @@
-# app/database.py
+
 """
 Creates database engine and session.
 SQLAlchemy uses this to talk to DB.

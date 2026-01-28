@@ -1,4 +1,3 @@
-# app/models.py
 """
 Database tables live here.
 """
