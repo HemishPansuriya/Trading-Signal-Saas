@@ -22,36 +22,13 @@ app = FastAPI(title="Trading Signals SaaS")
 # ✅ CORS CONFIG (IMPORTANT)
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "http://localhost:5173",   # Vite frontend
-        "http://127.0.0.1:5173",
-        "https://trading-signal-saas.onrender.com"
-    ],
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
-# headers = {
-#     "Authorization": f"Bearer {UPSTASH_TOKEN}",
-#     "Content-Type": "application/json"
-# }
 
-# def redis_get(key):
-#     url = f"{UPSTASH_URL}/get/{key}"
-#     res = requests.get(url, headers=headers)
-#     return res.json()
-
-# def redis_set(key, value):
-#     url = f"{UPSTASH_URL}/set/{key}/{value}"
-#     res = requests.post(url, headers=headers)
-#     return res.json()
-
-# @app.get("/")
-# def home():
-#     redis_set("visits", 1)
-#     data = redis_get("visits")
-#     return {"redis_data": data}
 
 # Root health check endpoint
 @app.get("/")
